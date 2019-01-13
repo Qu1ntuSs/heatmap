@@ -111,13 +111,11 @@ public class Main {
     private static void copyArray(String[][] raw, double[][] helper){
         for (int i = 0; i < raw.length; i++){
             for (int j = 6; j < raw[0].length; j++){
-                //System.out.print(raw[i][j]);
                 if (raw[i][j] == null){
                     raw[i][j] = "0.0";
                 }
                 helper[i][j-6] = Double.parseDouble(raw[i][j]);
             }
-            //System.out.println();
         }
 
     }
@@ -215,13 +213,8 @@ public class Main {
     }
 
     public static void main(String[] args) throws FileNotFoundException {
-        //String PATH = "test.csv";
         String PATH = "airband.csv";
-        //String PATH = "airband2.csv";
-        //String PATH = "airband3.csv";
-        //String PATH = "airband4.csv";
-        //String PATH = "1234.csv";
-        //String PATH = "survey_wide.csv";
+        
 
         String filename = "survey";
         String fileExtension = ".png";
@@ -247,7 +240,7 @@ public class Main {
         drawHeatmap(data, raw);
 
         //printArray(raw);
-
+        
         System.out.println("Finished");
         StdDraw.save(filename+raw[0][1]+fileExtension);
         System.out.println(filename+raw[0][1]+fileExtension + " saved sucessfully");
