@@ -1,7 +1,7 @@
 # Heatmap 
 
 Software for creating a heatmap from rtl_power csv data. 
-
+![Example Waterfall](survey_1.png)
 ## Usage:
 
 git clone https://github.com/gue-ni/heatmap.git <br>
