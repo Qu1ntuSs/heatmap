@@ -1,8 +1,7 @@
 # Heatmap 
 
-Software for creating a heatmap from rtl_power csv data. 
+Software for creating a heatmap from [`rtl_power`](https://github.com/keenerd/rtl-sdr) csv data. 
 ![Example Waterfall](examples/survey_1.png)
-![Example Waterfall](examples/survey_2.png)
 
 ## Usage:
 
