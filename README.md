@@ -11,15 +11,16 @@ To see some examples, view [examples/survey_1.png](examples/survey_1.png) and [e
 git clone https://github.com/gue-ni/heatmap.git <br>
 cd build <br>
 
-2. Collect data: <br>
+2. Collect signal data: <br>
+  24h survey of the entire spectrum covered by the RTL-SDR:
   `rtl_power -f 24M:1700M:1M -i 100 -g 50 -e 24h data.csv` <br>
-  or <br>
-  `rtl_power -f 118M:140M:8k -i 10 -g 50 1h survey.csv` <br>
+   Survey of the upper 19 MHz Airband for one hour. This can be used to find active air traffic control channels. <br>
+  `rtl_power -f 118M:140M:8k -i 10 -g 50 1h airband.csv` <br>
   
-3. Process data<br>
+3. Process data and create heatmap:<br>
   `java -jar RadioHeatmap.jar -f file.csv -i filename -t [png/jpeg] [OPTIONS]` <br> 
-  for example: <br>
-  `java -jar RadioHeatmap.jar -f data.csv -i image -t png` <br>
+  Use this command to label the heatmap. <br>
+  `java -jar RadioHeatmap.jar -f data.csv -i image -t png -l` <br>
   <br>
   Use this command to get help. <br>
   `java -jar RadioHeatmap.jar --help` <br>
